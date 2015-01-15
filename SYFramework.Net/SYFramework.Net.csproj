@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\TypeParse.cs" />
     <Compile Include="Cache\CachePackage.cs" />
     <Compile Include="Cache\HotCache.cs" />
     <Compile Include="Cache\IHotCache.cs" />
