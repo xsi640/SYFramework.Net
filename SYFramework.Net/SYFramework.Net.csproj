@@ -63,6 +63,7 @@
     <Compile Include="Common\SendMailHelper.cs" />
     <Compile Include="Common\SerializeHelper.cs" />
     <Compile Include="Common\SoundHelper.cs" />
+    <Compile Include="Common\StaticRamdom.cs" />
     <Compile Include="Common\TypeParseHelper.cs" />
     <Compile Include="Cache\CachePackage.cs" />
     <Compile Include="Cache\HotCache.cs" />
