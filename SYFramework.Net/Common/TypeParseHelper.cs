@@ -6,12 +6,12 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SYFramework.Net.Basic
+namespace SYFramework.Net.Common
 {
     /// <summary>
     /// 类型转换类
     /// </summary>
-    public static class TypeParse
+    public static class TypeParseHelper
     {
         /// <summary>
         /// 将字符串转换成Int32数据类型

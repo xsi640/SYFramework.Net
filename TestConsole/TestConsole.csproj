@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC2BF62A-4BDF-4453-8742-0AB4FCD0489B}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{24B4C20D-D9CB-41B5-9F04-8A9C77870210}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SYFramework.Net</RootNamespace>
-    <AssemblyName>SYFramework.Net</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>TestConsole</RootNamespace>
+    <AssemblyName>TestConsole</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,47 +32,26 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collection\Lockable.cs" />
-    <Compile Include="Collection\ThreadSafeList.cs" />
-    <Compile Include="Collection\ThreadSafeLookup.cs" />
-    <Compile Include="Common\ByteFormatterHelper.cs" />
-    <Compile Include="Common\CompressHelper.cs" />
-    <Compile Include="Common\DateTimeHelper.cs" />
-    <Compile Include="Common\DelayHelper.cs" />
-    <Compile Include="Common\EncryptHelper.cs" />
-    <Compile Include="Common\HardwareHelper.cs" />
-    <Compile Include="Common\HotKeyHelper.cs" />
-    <Compile Include="Common\HttpUtility.cs" />
-    <Compile Include="Common\OSHelper.cs" />
-    <Compile Include="Common\ResourceHelper.cs" />
-    <Compile Include="Common\SendMailHelper.cs" />
-    <Compile Include="Common\SerializeHelper.cs" />
-    <Compile Include="Common\SoundHelper.cs" />
-    <Compile Include="Common\TypeParseHelper.cs" />
-    <Compile Include="Cache\CachePackage.cs" />
-    <Compile Include="Cache\HotCache.cs" />
-    <Compile Include="Cache\IHotCache.cs" />
-    <Compile Include="Common\UtilHelper.cs" />
-    <Compile Include="Common\XmlHelper.cs" />
-    <Compile Include="Engines\BasicCircleEngine.cs" />
-    <Compile Include="Engines\ICircleEngine.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SYFramework.Net\SYFramework.Net.csproj">
+      <Project>{dc2bf62a-4bdf-4453-8742-0ab4fcd0489b}</Project>
+      <Name>SYFramework.Net</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
