@@ -47,10 +47,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Collection\Lockable.cs" />
+    <Compile Include="Collection\Lockable.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Collection\ThreadSafeList.cs" />
     <Compile Include="Collection\ThreadSafeLookup.cs" />
-    <Compile Include="Common\ByteFormatterHelper.cs" />
+    <Compile Include="Common\ByteFormatterHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Common\CompressHelper.cs" />
     <Compile Include="Common\DateTimeHelper.cs" />
     <Compile Include="Common\DelayHelper.cs" />
@@ -60,9 +64,13 @@
     <Compile Include="Common\HttpUtility.cs" />
     <Compile Include="Common\OSHelper.cs" />
     <Compile Include="Common\ResourceHelper.cs" />
-    <Compile Include="Common\SendMailHelper.cs" />
+    <Compile Include="Common\SendMailHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Common\SerializeHelper.cs" />
-    <Compile Include="Common\SoundHelper.cs" />
+    <Compile Include="Common\SoundHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Common\StaticRamdom.cs" />
     <Compile Include="Common\TypeParseHelper.cs" />
     <Compile Include="Cache\CachePackage.cs" />
