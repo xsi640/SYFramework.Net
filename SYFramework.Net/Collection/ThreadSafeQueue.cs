@@ -5,10 +5,15 @@ using System.Text;
 
 namespace SYFramework.Net.Collection
 {
-    public class WorkerQueue<T> where T : class
+    public class ThreadSafeQueue<T> where T : class
     {
         private Queue<T> _Queue = new Queue<T>();
         private object _Locker = new object();
+
+        public int Count
+        {
+            get { return this._Queue.Count; }
+        }
 
         public void Enqueue(T worker)
         {

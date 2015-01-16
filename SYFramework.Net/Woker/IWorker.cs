@@ -9,10 +9,12 @@ namespace SYFramework.Net.Woker
     {
         event Action<IWorker, EWorkerStatus> StatusChanged;
         Action Action { get; set; }
-        EWorkerStatus Status { get; }
+        EWorkerStatus Status { get; set; }
         DateTime StartTime { get; }
         Exception LastException { get; }
         void Start();
         void Stop();
+
+        bool Contains(IWorker worker);
     }
 }
