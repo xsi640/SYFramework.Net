@@ -8,11 +8,16 @@ namespace SYFramework.Net.Woker
 {
     public class BasicWorker : IWorker
     {
+        #region 变量
         private EWorkerStatus _Status = EWorkerStatus.Stopped;
         private Action _Action = null;
         private DateTime _StartTime = DateTime.Now;
         private Exception _LastException = null;
+        #endregion
 
+        public event Action<IWorker, EWorkerStatus> StatusChanged;
+
+        #region 属性
         public Action Action
         {
             get { return this._Action; }
@@ -21,6 +26,13 @@ namespace SYFramework.Net.Woker
         public EWorkerStatus Status
         {
             get { return this._Status; }
+            set
+            {
+                if (this._Status == value)
+                    return;
+                this._Status = value;
+                this.OnStatusChanged();
+            }
         }
         public DateTime StartTime
         {
@@ -30,12 +42,14 @@ namespace SYFramework.Net.Woker
         {
             get { return this._LastException; }
         }
+        #endregion
 
+        #region 方法
         public void Start()
         {
             if (this._Action != null)
             {
-                this._Status = EWorkerStatus.Started;
+                this.Status = EWorkerStatus.Started;
                 this._StartTime = DateTime.Now;
                 ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>
                 {
@@ -53,7 +67,14 @@ namespace SYFramework.Net.Woker
 
         public void Stop()
         {
-            this._Status = EWorkerStatus.Stopped;
+            this.Status = EWorkerStatus.Stopped;
         }
+
+        private void OnStatusChanged()
+        {
+            if (StatusChanged != null)
+                this.StatusChanged(this, this.Status);
+        }
+        #endregion
     }
 }

@@ -8,9 +8,7 @@ namespace SYFramework.Net.Woker
     public enum EWorkerStatus
     {
         Queue,
-        Stopping,
+        Started,
         Stopped,
-        Starting,
-        Started
     }
 }

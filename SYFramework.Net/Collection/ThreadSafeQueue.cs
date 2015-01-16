@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace SYFramework.Net.Collection
+{
+    public class WorkerQueue<T> where T : class
+    {
+        private Queue<T> _Queue = new Queue<T>();
+        private object _Locker = new object();
+
+        public void Enqueue(T worker)
+        {
+            lock (this._Locker)
+            {
+                if (!this._Queue.Contains(worker))
+                    this._Queue.Enqueue(worker);
+            }
+        }
+
+        public T Dequeue()
+        {
+            T result = default(T);
+            lock (this._Locker)
+            {
+                result = this._Queue.Dequeue();
+            }
+            return result;
+        }
+
+        public bool Contains(T t)
+        {
+            return this._Queue.Contains(t);
+        }
+    }
+}

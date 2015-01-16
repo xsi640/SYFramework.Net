@@ -7,6 +7,7 @@ namespace SYFramework.Net.Woker
 {
     public interface IWorker
     {
+        event Action<IWorker, EWorkerStatus> StatusChanged;
         Action Action { get; set; }
         EWorkerStatus Status { get; }
         DateTime StartTime { get; }
