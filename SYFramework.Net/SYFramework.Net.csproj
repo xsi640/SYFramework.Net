@@ -98,6 +98,9 @@
     <Compile Include="IO\ComOperation\Interop\IShellItem.cs" />
     <Compile Include="IO\ComOperation\Interop\SIGDN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Woker\BasicWorker.cs" />
+    <Compile Include="Woker\EWorkerStatus.cs" />
+    <Compile Include="Woker\IWorker.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
