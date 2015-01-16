@@ -82,6 +82,15 @@
     <Compile Include="Common\XmlHelper.cs" />
     <Compile Include="Engines\BasicCircleEngine.cs" />
     <Compile Include="Engines\ICircleEngine.cs" />
+    <Compile Include="IO\ComOperation\FileOperationProgressSink.cs" />
+    <Compile Include="IO\ComOperation\ComReleaser.cs" />
+    <Compile Include="IO\ComOperation\FileOperation.cs" />
+    <Compile Include="IO\ComOperation\Interop\CopyEngineResult.cs" />
+    <Compile Include="IO\ComOperation\Interop\FileOperationFlags.cs" />
+    <Compile Include="IO\ComOperation\Interop\IFileOperation.cs" />
+    <Compile Include="IO\ComOperation\Interop\IFileOperationProgressSink.cs" />
+    <Compile Include="IO\ComOperation\Interop\IShellItem.cs" />
+    <Compile Include="IO\ComOperation\Interop\SIGDN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
