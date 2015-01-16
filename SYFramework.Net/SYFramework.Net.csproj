@@ -55,6 +55,7 @@
     <Compile Include="Common\ByteFormatterHelper.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Common\ColorHelper.cs" />
     <Compile Include="Common\CompressHelper.cs" />
     <Compile Include="Common\DateTimeHelper.cs" />
     <Compile Include="Common\DelayHelper.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Common\HotKeyHelper.cs" />
     <Compile Include="Common\HttpUtility.cs" />
     <Compile Include="Common\OSHelper.cs" />
+    <Compile Include="Common\RegexHelper.cs" />
     <Compile Include="Common\ResourceHelper.cs" />
     <Compile Include="Common\SendMailHelper.cs">
       <SubType>Code</SubType>
