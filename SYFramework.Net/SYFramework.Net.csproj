@@ -47,6 +47,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cache\IStaticCache.cs" />
+    <Compile Include="Cache\StaticCache.cs" />
     <Compile Include="Collection\Lockable.cs">
       <SubType>Code</SubType>
     </Compile>
