@@ -33,5 +33,22 @@ namespace SYFramework.Net.Collection
         {
             return this._Queue.Contains(t);
         }
+
+        public bool Contains(Match<T> match)
+        {
+            bool result = false;
+            lock(this._Locker)
+            {
+                foreach(T t in this._Queue)
+                {
+                    if (match(t))
+                    {
+                        result = true;
+                        break;
+                    }
+                }
+            }
+            return result;
+        }
     }
 }
