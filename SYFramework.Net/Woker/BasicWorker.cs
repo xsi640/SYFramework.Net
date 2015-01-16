@@ -11,13 +11,13 @@ namespace SYFramework.Net.Woker
         private EWorkerStatus _Status = EWorkerStatus.Stopped;
         private Action _Action = null;
         private DateTime _StartTime = DateTime.Now;
+        private Exception _LastException = null;
 
         public Action Action
         {
             get { return this._Action; }
             set { this._Action = value; }
         }
-
         public EWorkerStatus Status
         {
             get { return this._Status; }
@@ -25,6 +25,10 @@ namespace SYFramework.Net.Woker
         public DateTime StartTime
         {
             get { return this._StartTime; }
+        }
+        public Exception LastException
+        {
+            get { return this._LastException; }
         }
 
         public void Start()
@@ -35,7 +39,14 @@ namespace SYFramework.Net.Woker
                 this._StartTime = DateTime.Now;
                 ThreadPool.QueueUserWorkItem(new WaitCallback((obj) =>
                 {
-                    this._Action();
+                    try
+                    {
+                        this._Action();
+                    }
+                    catch (Exception ex)
+                    {
+                        this._LastException = ex;
+                    }
                 }));
             }
         }
