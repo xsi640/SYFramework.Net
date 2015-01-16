@@ -20,7 +20,10 @@ namespace SYFramework.Net.Collection
         /// <summary>
         /// Returns the number of lock conflicts that have occurred
         /// </summary>
-        public static long Conflicts { get { return _conflicts; } }
+        public static long Conflicts
+        {
+            get { return _conflicts; }
+        }
 
         /// <summary>
         /// Aquire the lock
@@ -74,7 +77,10 @@ namespace SYFramework.Net.Collection
             _lock = 0;
         }
 
-        public bool Locked { get { return (_lock != 0); } }
+        public bool Locked
+        {
+            get { return (_lock != 0); }
+        }
 
         public bool TryAquireLock()
         {
