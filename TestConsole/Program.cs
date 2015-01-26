@@ -11,8 +11,7 @@ namespace TestConsole
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
-                Console.WriteLine(UtilHelper.GetRamdom(0, 100));
+
         }
     }
 }
