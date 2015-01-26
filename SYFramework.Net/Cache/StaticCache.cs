@@ -38,5 +38,16 @@ namespace SYFramework.Net.Cache
                     this._Dictionary.Remove(key);
             }
         }
+
+        public TValue this[TKey key]
+        {
+            get
+            {
+                TValue result = null;
+                if (this._Dictionary.ContainsKey(key))
+                    result = this._Dictionary[key];
+                return result;
+            }
+        }
     }
 }
