@@ -15,6 +15,6 @@ namespace SYFramework.Net.Woker
         void Start();
         void Stop();
 
-        bool Contains(IWorker worker);
+        bool Equals(IWorker worker);
     }
 }

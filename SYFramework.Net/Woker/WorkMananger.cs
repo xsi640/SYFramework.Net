@@ -29,7 +29,7 @@ namespace SYFramework.Net.Woker
 
             if (!this._Queue.Contains(new Match<IWorker>((w) =>
             {
-                return worker.Contains(w);
+                return worker.Equals(w);
             })))
             {
                 worker.Status = EWorkerStatus.Queue;

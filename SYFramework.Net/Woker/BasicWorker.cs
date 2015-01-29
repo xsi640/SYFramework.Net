@@ -76,5 +76,11 @@ namespace SYFramework.Net.Woker
                 this.StatusChanged(this, this.Status);
         }
         #endregion
+
+
+        public bool Equals(IWorker worker)
+        {
+            return this.Equals(worker);
+        }
     }
 }
