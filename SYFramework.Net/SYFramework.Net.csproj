@@ -68,6 +68,7 @@
     <Compile Include="Common\EncryptHelper.cs" />
     <Compile Include="Common\HardwareHelper.cs" />
     <Compile Include="Common\HotKeyHelper.cs" />
+    <Compile Include="Common\HttpHelper.cs" />
     <Compile Include="Common\HttpUtility.cs" />
     <Compile Include="Common\OSHelper.cs" />
     <Compile Include="Common\RegexHelper.cs" />
